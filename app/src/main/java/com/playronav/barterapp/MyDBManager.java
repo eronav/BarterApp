@@ -23,12 +23,8 @@ import org.jsoup.nodes.Element;
 
 import androidx.annotation.Nullable;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 public class MyDBManager extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "BarterBuddies_2.db";

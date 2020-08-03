@@ -18,7 +18,6 @@ public class MainMenu extends AppCompatActivity {
     TextView needHelp;
     TextView canHelp;
 
-    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,14 +29,7 @@ public class MainMenu extends AppCompatActivity {
         canHelp.setClickable(true);
 
         GameEnvironment.c =  getApplicationContext();
-        //GameEnvironment.a = this;
         GameEnvironment.db = new MyDBManager(GameEnvironment.c);
-//        SQLiteDatabase mydb = GameEnvironment.db.getReadableDatabase();
-//        if (mydb != null) {
-//            File dbpath = new File("BarterBuddies.db");
-//            mydb.deleteDatabase(dbpath);
-//            mydb.close();
-//        }
 
         needHelp.setOnClickListener(new View.OnClickListener() {
             @Override
