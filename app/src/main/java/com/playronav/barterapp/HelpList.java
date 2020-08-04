@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.constraintlayout.widget.Guideline;
 import androidx.core.content.ContextCompat;
 
 import android.content.Context;
@@ -62,19 +63,16 @@ public class HelpList extends AppCompatActivity {
 
     public void addLayout(String[] s, LinearLayout ll) {
         Drawable border = ContextCompat.getDrawable(this, R.drawable.custom_border);
-
+        
         // initializing the parameters for the views
-        LinearLayout.LayoutParams llp1 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 80);
+        LinearLayout.LayoutParams llp1 = new LinearLayout.LayoutParams(GameEnvironment.phoneDims[0]/3, 80);
         llp1.weight = 1;
         llp1.setMargins(0, 0,0,0);
-        LinearLayout.LayoutParams llp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 80);
-        llp2.weight = 2;
+        LinearLayout.LayoutParams llp2 = new LinearLayout.LayoutParams(GameEnvironment.phoneDims[0]/3, 80);
+        llp2.weight = 1;
         llp2.setMargins(0, 0,0,0);
-        LinearLayout.LayoutParams llp3 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 80);
-        llp3.weight = 2;
-        llp3.setMargins(9, 0,0,0);
-        LinearLayout.LayoutParams llp4 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 80);
-        llp4.weight = (float) 1.5;
+        LinearLayout.LayoutParams llp4 = new LinearLayout.LayoutParams(GameEnvironment.phoneDims[0]/3, 80);
+        llp4.weight = 1;
         llp4.setMargins(6, 0,0,0);
 
         // creating the views and setting the text and border
@@ -102,18 +100,6 @@ public class HelpList extends AppCompatActivity {
 
 /////////////////////////////////////////////////////////////////////
 
-        TextView v3 = new TextView(this);
-        v3.setText(s[2]);
-        v3.setTextSize(18);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            v3.setBackground(border);
-        }
-        v3.setTextColor(Color.BLACK);
-        v3.setLayoutParams(llp3);
-        v3.setPadding(10,0,0,0);
-
-/////////////////////////////////////////////////////////////////////
-
         TextView v4 = new TextView(this);
         v4.setText(s[3]);
         v4.setTextSize(18);
@@ -127,7 +113,6 @@ public class HelpList extends AppCompatActivity {
         //adding the view to the outer layout
         ll.addView(v);
         ll.addView(v2);
-        // ll.addView(vvv);
         ll.addView(v4);
     }
     public int[] getWindowDims (Context myappctxt) {

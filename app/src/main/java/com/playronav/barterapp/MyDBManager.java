@@ -76,7 +76,7 @@ public class MyDBManager extends SQLiteOpenHelper {
         StringRequest srq = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(GameEnvironment.c, "YAY", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(GameEnvironment.c, "YAY", Toast.LENGTH_SHORT).show();
             }
         }, new Response.ErrorListener() {
             @Override
